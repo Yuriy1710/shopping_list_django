@@ -1,0 +1,18 @@
+{% extends 'main/main.html' %}
+{% block content %}
+
+<h5 style="font-size:34px; color: darkblue">Register<h5>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Register" class="btn btn-success" style="padding: 5px; 
+        font-size: 18px;">
+    </form>
+    
+    <h4>Already have an account? <a href="{% url 'login' %}"><button class="btn btn-success" style="padding: 5px; 
+        font-size: 18px;">Log In<button></a></h4>
+        
+
+
+{% endblock content %}

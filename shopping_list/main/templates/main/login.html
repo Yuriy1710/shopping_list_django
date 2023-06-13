@@ -1,0 +1,15 @@
+{% extends 'main/main.html' %}
+{% block content %}
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Log In Now" class="btn btn-success" style="padding: 5px; 
+    font-size: 18px;">
+</form>
+
+<p>Don't have an account? <a href="{% url 'register' %}"><button class="btn btn-success" style="padding: 5px; font-size: 18px;">Register New Account</button></a></p>
+
+
+{% endblock content %}

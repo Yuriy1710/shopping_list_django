@@ -1,0 +1,17 @@
+{% extends 'main/main.html' %}
+{% block content %}
+
+<h3><i>Create or edit item</i></h3>
+<a href="{% url 'tasks' %}"><i class="bi bi-arrow-up-left-square-fill"></i> Go back</a>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit" class="btn btn-success" style="padding: 5px; 
+    font-size: 18px;">
+
+    
+</form>
+
+
+{% endblock content %}
